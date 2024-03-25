@@ -140,4 +140,4 @@ const returnMovieTitle = (watchlist) => {
 const titlesArray = returnMovieTitle(watchList);
 console.log(titlesArray);
 
-// devuelvo solo los titulos de las peliculas que cumplen los requisitos propuestos.
+// devuelvo solo los titulos de las peliculas que cumplen los requisitos propuestos (SOLO CON .MAP YA QUE LO PEDIA EXPLICITAMENTE EL ENUNCIADO)
