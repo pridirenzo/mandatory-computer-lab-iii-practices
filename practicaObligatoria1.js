@@ -127,17 +127,19 @@ let watchList = [
     },
 ];
 
-let movieTitles = [];
+
+let filteredMovies = [];
 
 const returnMovieTitle = (watchlist) => {
-    watchList.map((movie => {
-        if(movie.Director === "Christopher Nolan" && movie.imdbRating > 8.0) 
-            movieTitles.push({"Title": movie.Title});
-        }));
-    return movieTitles;
+    filteredMovies = watchList.filter((movie) =>{
+        return movie.Director === "Christopher Nolan" && movie.imdbRating > 8.0;
+    });
+    filteredMovies = filteredMovies.map((movie) =>{
+       return ({"Title": movie.Title});
+    });
+    return filteredMovies;
 };
+
 
 const titlesArray = returnMovieTitle(watchList);
 console.log(titlesArray);
-
-// devuelvo array de objetos que contienen solo los titulos de las peliculas que cumplen los requisitos propuestos (SOLO CON .MAP YA QUE LO PEDIA EXPLICITAMENTE EL ENUNCIADO)
