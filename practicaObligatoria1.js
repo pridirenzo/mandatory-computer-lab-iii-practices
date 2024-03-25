@@ -132,7 +132,7 @@ let movieTitles = [];
 const returnMovieTitle = (watchlist) => {
     watchList.map((movie => {
         if(movie.Director === "Christopher Nolan" && movie.imdbRating > 8.0) 
-            movieTitles.push(movie.Title);
+            movieTitles.push({"Title": movie.Title});
         }));
     return movieTitles;
 };
@@ -140,4 +140,4 @@ const returnMovieTitle = (watchlist) => {
 const titlesArray = returnMovieTitle(watchList);
 console.log(titlesArray);
 
-// devuelvo solo los titulos de las peliculas que cumplen los requisitos propuestos (SOLO CON .MAP YA QUE LO PEDIA EXPLICITAMENTE EL ENUNCIADO)
+// devuelvo array de objetos que contienen solo los titulos de las peliculas que cumplen los requisitos propuestos (SOLO CON .MAP YA QUE LO PEDIA EXPLICITAMENTE EL ENUNCIADO)
